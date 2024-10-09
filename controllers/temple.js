@@ -1,5 +1,6 @@
 const db = require('../models');
 const Temple = db.temples;
+const { ObjectId } = require('bson');
 
 const apiKey =
   'Ezl0961tEpx2UxTZ5v2uKFK91qdNAr5npRlMT1zLcE3Mg68Xwaj3N8Dyp1R8IvFenrVwHRllOUxF0Og00l0m9NcaYMtH6Bpgdv7N';
@@ -16,10 +17,12 @@ exports.create = (req, res) => {
 
   // Create a Temple
   const temple = new Temple({
+    _id: new ObjectId(req.body._id),
     temple_id: req.body.temple_id,
-    name: req.body.name,
-    description: req.body.description,
+    additionalInfo: req.body.additionalInfo,
+    name: req.body.name,    
     location: req.body.location,
+    dedicated: req.body.dedicated
   });
   // Save Temple in the database
   temple
@@ -49,8 +52,18 @@ exports.findAll = (req, res) => {
         _id: 0,
       }
     )
+      .sort({ name: 1 }) // Sort by name in ascending order
       .then((data) => {
-        res.send(data);
+        // Create a new array with ordered objects *additionalInfo* at bottom
+        const orderedData = data.map(temple => ({
+          temple_id: temple.temple_id,
+          name: temple.name,
+          location: temple.location,
+          dedicated: temple.dedicated,
+          additionalInfo: temple.additionalInfo,
+        }));
+        res.send(orderedData); // Send the newly ordered data
+        // res.send(data);
       })
       .catch((err) => {
         res.status(500).send({
