@@ -8,7 +8,8 @@
   "host": "https://w4-temple-api-route-swagger-documentation.onrender.com/",
   "basePath": "/",
   "schemes": [
-    "http"
+    "http",
+    "https"
   ],
   "paths": {
     "/api-docs": {
