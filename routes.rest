@@ -27,3 +27,34 @@ apiKey: Ezl0961tEpx2UxTZ5v2uKFK91qdNAr5npRlMT1zLcE3Mg68Xwaj3N8Dyp1R8IvFenrVwHRll
   "location": "Celestial Kingdom, Kolob",
   "dedicated": "8 October 2024"
 }
+###
+// PRODUCTION Deploy
+// RETRIEVING WITH GET
+### 
+// getting documentation URL
+GET https://w4-temple-api-route-swagger-documentation.onrender.com/
+###
+// getting list of all temples (ordered alphabetically)
+GET https://w4-temple-api-route-swagger-documentation.onrender.com/temples
+Content-Type: application/json
+apiKey: Ezl0961tEpx2UxTZ5v2uKFK91qdNAr5npRlMT1zLcE3Mg68Xwaj3N8Dyp1R8IvFenrVwHRllOUxF0Og00l0m9NcaYMtH6Bpgdv7N
+###
+// getting 1 temple by temple_id (1 through 266)
+GET https://w4-temple-api-route-swagger-documentation.onrender.com/temples/10
+Content-Type: application/json
+apiKey: Ezl0961tEpx2UxTZ5v2uKFK91qdNAr5npRlMT1zLcE3Mg68Xwaj3N8Dyp1R8IvFenrVwHRllOUxF0Og00l0m9NcaYMtH6Bpgdv7N
+// CREATING TEMPLE WITH POST
+### 
+POST https://w4-temple-api-route-swagger-documentation.onrender.com/temples
+Content-Type: application/json
+apiKey: Ezl0961tEpx2UxTZ5v2uKFK91qdNAr5npRlMT1zLcE3Mg68Xwaj3N8Dyp1R8IvFenrVwHRllOUxF0Og00l0m9NcaYMtH6Bpgdv7N
+
+{
+  "_id": "66fe08c7b9dffdc00f411ba4",
+  "temple_id": 0,
+  "additionalInfo": false,
+  "name": "Aawe Inspiring Fictional Temple",  
+  "location": "Celestial Kingdom, Kolob",
+  "dedicated": "8 October 2024"
+}
+###
