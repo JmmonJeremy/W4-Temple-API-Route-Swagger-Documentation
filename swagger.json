@@ -8,10 +8,28 @@
   "host": "w4-temple-api-route-swagger-documentation.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http",
     "https"
   ],
   "paths": {
+    "/": {
+      "get": {
+        "description": "Welcome to the LDS Temple API",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "documentationURL": {
+                  "type": "string",
+                  "example": "https://jmmonjeremy.github.io/Jeremy-s--API-Docs/"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api-docs": {
       "get": {
         "description": "",
@@ -42,7 +60,7 @@
         }
       },
       "post": {
-        "description": "API Key if needed: Ezl0961tEpx2UxTZ5v2uKFK91qdNAr5npRlMT1zLcE3Mg68Xwaj3N8Dyp1R8IvFenrVwHRllOUxF0Og00l0m9NcaYMtH6Bpgdv7N",
+        "description": "",
         "parameters": [
           {
             "name": "body",
