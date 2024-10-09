@@ -2,6 +2,7 @@ const routes = require('express').Router();
 const temple = require('./temple');
 const swagger = require('./swagger');
 
+// See https://swagger-autogen.github.io/docs/swagger-2/schemas-and-definitions under @schema section for guidance
 routes.get('/', (req, res) => {
   /* #swagger.description = "Welcome to the LDS Temple API" */
   /* #swagger.responses[200] = { 
