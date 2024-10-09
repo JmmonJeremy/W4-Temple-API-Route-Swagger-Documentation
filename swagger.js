@@ -1,12 +1,17 @@
 const swaggerAutogen = require('swagger-autogen')();
 
+// Check the environment and set the host and scheme accordingly
+const isProduction = process.env.NODE_ENV === 'production';
+
 const doc = {
   info: {
     title: 'temple-api',
     description: 'LDS Temple API for BYU-Idaho CSE341 team project'
   },
-  host: 'localhost:8080',
-  shemes: ['http']
+  host: isProduction
+    ? 'w4-temple-api-route-swagger-documentation.onrender.com'
+    : 'localhost:8080',
+  schemes: isProduction ? ['https'] : ['http'],
 };
 
 const outputFile = './swagger.json';

@@ -1,8 +1,11 @@
 // LOCALHOST
 // RETRIEVING WITH GET
 ###
+// getting the API docs from Swagger
+GET http://localhost:8080/api-docs
+###
 // getting documentation URL
-GET http://localhost:8080/ HTTP/1.1
+GET http://localhost:8080/
 ###
 // getting list of all temples (ordered alphabetically)
 GET http://localhost:8080/temples
@@ -19,8 +22,7 @@ POST http://localhost:8080/temples HTTP/1.1
 Content-Type: application/json
 apiKey: Ezl0961tEpx2UxTZ5v2uKFK91qdNAr5npRlMT1zLcE3Mg68Xwaj3N8Dyp1R8IvFenrVwHRllOUxF0Og00l0m9NcaYMtH6Bpgdv7N
 
-{
-  "_id": "66fe08c7b9dffdc00f411ba4",
+{  
   "temple_id": 0,
   "additionalInfo": false,
   "name": "Aawe Inspiring Fictional Temple",  
@@ -30,6 +32,9 @@ apiKey: Ezl0961tEpx2UxTZ5v2uKFK91qdNAr5npRlMT1zLcE3Mg68Xwaj3N8Dyp1R8IvFenrVwHRll
 ###
 // PRODUCTION Deploy
 // RETRIEVING WITH GET
+###
+// getting the API docs from Swagger
+GET https://w4-temple-api-route-swagger-documentation.onrender.com/api-docs
 ### 
 // getting documentation URL
 GET https://w4-temple-api-route-swagger-documentation.onrender.com/
@@ -50,7 +55,6 @@ Content-Type: application/json
 apiKey: Ezl0961tEpx2UxTZ5v2uKFK91qdNAr5npRlMT1zLcE3Mg68Xwaj3N8Dyp1R8IvFenrVwHRllOUxF0Og00l0m9NcaYMtH6Bpgdv7N
 
 {
-  "_id": "66fe08c7b9dffdc00f411ba4",
   "temple_id": 0,
   "additionalInfo": false,
   "name": "Aawe Inspiring Fictional Temple",  
